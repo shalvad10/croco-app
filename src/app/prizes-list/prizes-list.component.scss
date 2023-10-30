@@ -1,0 +1,36 @@
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    li {
+        padding: 5px;
+        width: 200px;
+        height: 100px;
+        line-height: 100px;
+        opacity: 0.3;
+        &.winned {
+            opacity: 1;
+        }
+        .icon {
+            width: 100px;
+            height: 100px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            &.chopper{
+                background-image: url('../../assets/images/chopper.png');
+            }
+            &.phone{
+                background-image: url('../../assets/images/phone.png');
+            }
+            &.macbook{
+                background-image: url('../../assets/images/macbook.png');
+            }
+            &.car{
+                background-image: url('../../assets/images/car.png');
+            }
+        }
+    }
+}

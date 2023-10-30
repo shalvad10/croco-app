@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let prize of prizeList" [ngClass]="[prizeWinned ? prizeWinned.id == prize.id ? 'winned' : '' : '']"> 
+        <span *ngIf="prize.prizetype == 'text'"> {{ prize.text }} </span>
+        <div class="icon" [ngClass]="prize.iconName"></div>
+    </li>
+</ul>
