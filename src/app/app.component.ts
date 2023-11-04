@@ -21,9 +21,7 @@ export class AppComponent {
     { id: 'phone', prizetype: 'icon', colorPIXI: 0x3D30A2, color: '#3D30A2', iconName: 'phone'}
   ];
 
-  public selectDestination(ev: any) {
-    console.warn(this.selectedDestination)
-  }
+  public selectDestination(ev: any) { }
 
   public prizeWon(ev: any) {
     this.prizeWinned = undefined;

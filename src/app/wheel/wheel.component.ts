@@ -168,7 +168,6 @@ export class WheelComponent implements AfterViewInit {
           if (selectedElement?.isText == true && selectedElementValue !== undefined) {
             if(element.children[0].children[0]['_text'] === selectedElementValue) {
               this.wonItemSector = element;
-              console.error(element);
               this.toggleFiltertoContainer(true);
             }
           } else if (selectedElement?.isText == false && selectedElementIcon !== undefined) {
@@ -189,12 +188,9 @@ export class WheelComponent implements AfterViewInit {
       for (let i = 0; i < elements.length; i++) {
         const element = elements[i];
         if (element !== this.wonItemSector) {
-          console.error('here')
           const blurFilter = new PIXI.filters.BlurFilter();
           blurFilter.blur = 9;
           element.filters = [blurFilter];
-        } else {
-          console.warn(element, this.wonItemSector, element != this.wonItemSector);
         }
       }
     } else {
