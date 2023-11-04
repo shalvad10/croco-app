@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild, Input, Output, EventEmitter } from '@angular/core';
-import { Linear, TweenLite, TweenMax } from 'gsap';
+import { Linear, Power3, Power4, TweenMax } from 'gsap';
 import * as PIXI from 'pixi.js';
 
 @Component({
@@ -153,7 +153,7 @@ export class WheelComponent implements AfterViewInit {
     
     TweenMax.to(this.wheel, 1, {
       rotation: finalRotation,
-      ease: Linear.easeNone,
+      ease: Power3.easeInOut,
       repeat: 3,
       repeatRefresh: true,
       direction: -1,
