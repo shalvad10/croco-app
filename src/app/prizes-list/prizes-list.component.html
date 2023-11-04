@@ -1,6 +1,6 @@
 <ul>
-    <li *ngFor="let prize of prizeList" [ngClass]="[prizeWinned ? prizeWinned.id == prize.id ? 'winned' : '' : '']"> 
+    <li *ngFor="let prize of prizeList" [@testAnimation]="prizeWinned ? prizeWinned.id == prize.id ?{value: animationState, params: {backColor: prizeWinned.color}} : '' : ''"> 
         <span *ngIf="prize.prizetype == 'text'"> {{ prize.text }} </span>
-        <div class="icon" [ngClass]="prize.iconName"></div>
+        <div *ngIf="prize.prizetype != 'text'" class="icon" [ngClass]="prize.iconName"></div>
     </li>
 </ul>

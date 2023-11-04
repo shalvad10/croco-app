@@ -1,6 +1,13 @@
 <div class="container">
     <div class="row">
-        <app-wheel [prizes]="prizes" (prizeWon)="prizeWon($event)"></app-wheel>
+        <div class="input">
+            <label for="select"> Select destination Segment: </label>
+            <select name="select" id="select" [(ngModel)]="selectedDestination" (change)="selectDestination($event)">
+                <option value="random"> RANDOM </option>
+                <option *ngFor="let prize of prizes" [value]="prize.id"> {{ prize.text ? prize.text : prize.iconName | uppercase }} </option>
+            </select>
+        </div>
+        <app-wheel [prizes]="prizes" [destination]="selectedDestination" (prizeWon)="prizeWon($event)"></app-wheel>
     </div>
     <div class="row">
         <app-prizes-list [prizeWon]="prizeWinned" [prizes]="prizes"></app-prizes-list>

@@ -5,11 +5,14 @@ ul {
     align-items: center;
     flex-wrap: wrap;
     li {
-        padding: 5px;
         width: 200px;
         height: 100px;
-        line-height: 100px;
         opacity: 0.3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        overflow: hidden;
         &.winned {
             opacity: 1;
         }
